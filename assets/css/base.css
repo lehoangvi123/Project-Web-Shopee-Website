@@ -1,0 +1,240 @@
+:root{ 
+    --white-color: #fff;
+    --black-color: #000; 
+    --text-color: #333; 
+    --primary-color: #EE4D2d; 
+    /* --primary-color-rgba: rgb(238, 75, 43);   */ 
+    --border-color: #dbdbdb; 
+    --navbar-height: 34px;
+    --header-height: 120px; 
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height)); 
+    --star-gold-color: #FFCE3E;
+} 
+
+* { 
+    
+} 
+
+html{ 
+    font-size: 62.5%; 
+    /* 100% = 1rem = 16px */  
+    /* 62.5% = 1rem = 10px */ 
+    line-height: 1.6rem; 
+    font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
+}  
+
+body{ 
+    line-height: 2.3rem;
+}
+
+p{ 
+    font-size: 1.6rem;   
+    /* 1.6rem = 16px */
+    /* 1rem = 100% = 16px */ 
+
+}  
+
+.grid{ 
+    width: 1200px; 
+    max-width: 100%; 
+    margin: 0 auto; 
+
+} 
+
+.grid__full{ 
+    width: 100%; 
+} 
+
+.grid__row{ 
+    display: flex; 
+    flex-wrap: wrap;
+}   
+
+.grid__column-2-4{ 
+    padding-left: 12px; 
+    padding-right: 12px; 
+    width: 16%;  
+} 
+
+.grid__column-10{ 
+    padding-left: 12px; 
+    padding-right: 12px; 
+    width: 80%;  
+}
+
+
+
+
+/* Animation */ 
+@keyframes fadeIn{ 
+    from { 
+        opacity: 0;
+     }
+    to { 
+        opacity: 1;
+     }
+}
+
+@keyframes growth {
+    from{
+        /* height: 0;
+         */
+         /* transform: scale(var(--growth-form)); */
+        opacity: 0;
+    } 
+    to{ 
+        opacity: 1;
+        /* height: var(--percent);  */ 
+        /* transform: scale(var(--growth-to)); */
+
+    }
+}
+
+/* Modal */ 
+.modal{ 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;  
+    display: none;
+    animation: growth linear 0.9s;
+
+} 
+.modal__overlay{ 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0, 0.4);  
+    display: none;
+    /* z-index: 1; */ 
+    /* animation: growth linear 0.4s; */
+}  
+
+.modal__body{ 
+    /* width: 300px;  */
+    /* height: 300px;    */
+    background-color: var(--white-color);
+    background-color: #fff; 
+    margin: auto; 
+    position: relative; 
+    z-index: 1;
+    border-radius: 5px; 
+    --growth-form: 0.7;
+    --growth-to: 1; 
+}
+
+.btn{ 
+    min-width: 142px; 
+    height: 34px; 
+    text-decoration: none;
+    border: none;
+    border-radius: 2px; 
+    font-size: 1.4rem; 
+    padding: 0; 
+    outline: none;  
+    cursor: pointer; 
+    color: var(--text-color); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    /* background-color: rgba(0,0,0,0.05); */
+}  
+
+.btn.btn--normal:hover{ 
+    background-color: rgba(0,0,0,0.07);
+}
+
+
+
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--white-color); 
+
+} 
+
+.btn.btn--primary:hover{ 
+    opacity:0.9;
+}
+
+.btn.btn--disable{ 
+    cursor: default; 
+    filter: brightness(80%); 
+    background-color: #999;  
+    color: #ccc;
+
+} 
+ 
+.btn.btn--size-s{ 
+    height: 30px; 
+    /* font-size: 12px; */ 
+    padding: 0 10px;
+}
+
+.btn--facebook{ 
+    background-color: #3A5A98;
+}
+ 
+.btn--google{ 
+    background-color: #fff; 
+    color: rgba(0,0,0,0.8);
+} 
+
+/* Selection */
+.select-input{ 
+    height: 34px; 
+    padding: 0 12px; 
+    border-radius: 2px; 
+    background-color: var(--white-color); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;  
+    margin: 0 5px; 
+} 
+
+.select-input__label{ 
+    font-size: 1.4rem;  
+    margin-right: 140px; 
+}
+
+.select-input__icon{ 
+    font-size: 1.4rem; 
+    color: rgba(131,131,131); 
+    /* margin: 0 16px 0 8px;  */
+    position: relative; 
+    top: 1px; 
+}
+
+.select-input__list{  
+    position: absolute;
+    left: 40%;
+    right: 313px;
+    top: 30%;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    transform: translateX(119%);
+    display: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}   
+
+.select-input:hover .select-input__list{ 
+    display: block;
+}
+
+.select-input__link{ 
+    font-size: 1.4rem; 
+    color:var(--text-color); 
+    text-decoration: none; 
+    display: block; 
+    padding: 5px 0; 
+
+} 
+
+.select-input__link:hover{ 
+    color: var(--primary-color);
+}
+
