@@ -1,3 +1,5 @@
+<a href="https://lehoangvi123.github.io/Project-Web-Shopee-Website/BuildWebShoppe.html"> https://lehoangvi123.github.io/Project-Web-Shopee-Website/BuildWebShoppe.html</a>
+
 <h1>Project-Web-Shopee-Website</h1>
 <p>
     This project is my first step into web development, focusing on building a simple yet effective 
